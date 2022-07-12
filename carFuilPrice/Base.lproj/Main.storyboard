@@ -16,10 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Başlangıç şehri" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RWm-DD-PsM">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Başlangıç Noktası" borderStyle="roundedRect" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="RWm-DD-PsM">
                                 <rect key="frame" x="48" y="154" width="299" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="8kR-lb-IyU"/>
+                                    <constraint firstAttribute="height" constant="34" id="rsm-Vl-1Lh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -27,8 +27,19 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="u5N-Hp-GM8"/>
                                 </connections>
                             </textField>
-                            <pickerView hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AW3-tb-cuT">
-                                <rect key="frame" x="47" y="196" width="300" height="155"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Varış noktası" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UEi-8g-ENw">
+                                <rect key="frame" x="47" y="196" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="rT5-Bj-r9e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MQc-5w-7dI"/>
+                                </connections>
+                            </textField>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AW3-tb-cuT">
+                                <rect key="frame" x="43" y="238" width="300" height="155"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ecW-SE-4V2"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="owC-XY-pQX"/>
@@ -38,19 +49,23 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RWm-DD-PsM" secondAttribute="trailing" constant="67" id="7oj-dx-kjG"/>
-                            <constraint firstItem="RWm-DD-PsM" firstAttribute="centerX" secondItem="AW3-tb-cuT" secondAttribute="centerX" id="Ec3-th-lGy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AW3-tb-cuT" secondAttribute="bottom" constant="511" id="Lhf-uh-nkJ"/>
-                            <constraint firstItem="AW3-tb-cuT" firstAttribute="top" secondItem="RWm-DD-PsM" secondAttribute="bottom" constant="8" id="SRQ-mZ-uEN"/>
-                            <constraint firstItem="RWm-DD-PsM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="TYF-8p-81e"/>
-                            <constraint firstItem="RWm-DD-PsM" firstAttribute="trailing" secondItem="AW3-tb-cuT" secondAttribute="trailing" id="aqC-27-LPU"/>
-                            <constraint firstItem="RWm-DD-PsM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="qWz-yT-YRE"/>
+                            <constraint firstItem="RWm-DD-PsM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="38e-je-29T"/>
+                            <constraint firstItem="RWm-DD-PsM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="5xn-mn-66A"/>
+                            <constraint firstItem="AW3-tb-cuT" firstAttribute="top" secondItem="UEi-8g-ENw" secondAttribute="bottom" constant="8" id="ENd-8k-Ofx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AW3-tb-cuT" secondAttribute="bottom" constant="469" id="FCO-5A-W34"/>
+                            <constraint firstItem="RWm-DD-PsM" firstAttribute="centerX" secondItem="UEi-8g-ENw" secondAttribute="centerX" id="HM0-7l-6oq"/>
+                            <constraint firstItem="AW3-tb-cuT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="ZAz-CI-fEY"/>
+                            <constraint firstItem="UEi-8g-ENw" firstAttribute="top" secondItem="RWm-DD-PsM" secondAttribute="bottom" constant="8" id="h2o-pF-JHH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RWm-DD-PsM" secondAttribute="trailing" constant="67" id="k2h-g4-Uku"/>
+                            <constraint firstItem="RWm-DD-PsM" firstAttribute="trailing" secondItem="UEi-8g-ENw" secondAttribute="trailing" id="m0U-oY-Aox"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AW3-tb-cuT" secondAttribute="trailing" constant="71" id="tuo-Jd-9ez"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ARAÇ YAKIT HESABI" id="btX-Fj-Hq5"/>
                     <connections>
                         <outlet property="beginCityTextbox" destination="RWm-DD-PsM" id="4pt-e1-d0G"/>
                         <outlet property="cityPickerView" destination="AW3-tb-cuT" id="rv8-cI-faP"/>
+                        <outlet property="endCityTextbox" destination="UEi-8g-ENw" id="CPE-VI-cSa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

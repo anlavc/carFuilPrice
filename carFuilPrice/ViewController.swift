@@ -13,8 +13,8 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
     
     @IBOutlet weak var beginCityTextbox: UITextField!
     @IBOutlet weak var cityPickerView: UIPickerView!
-  
-       
+    @IBOutlet weak var endCityTextbox: UITextField!
+    
 
     
     override func viewDidLoad() {
@@ -43,19 +43,22 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
         func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 
             self.beginCityTextbox.text = self.cityArray[row]
-          //  self.cityPickerView.isHidden = false
+           // self.endCityTextbox.text = self.cityArray[row]
+          
         }
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
         beginCityTextbox.endEditing(false)
         if textField == self.beginCityTextbox {
                     self.cityPickerView.isHidden = false
+            
             //boş alana tıklayınca pickeri gizler
             let gestureRecognizer = UITapGestureRecognizer(target: self,action: #selector(hidePicker))
             view.addGestureRecognizer(gestureRecognizer)
             
                
             }
+        
         }
     
     @objc func hidePicker() {
