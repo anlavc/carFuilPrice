@@ -21,6 +21,8 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let data = DataLoader().userData
+        print(data)
         endCityTextbox.endEditing(false)
         beginCityTextbox.endEditing(false)
       
@@ -59,11 +61,6 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
             }
         }
 
-       
-
-       
-        
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
        
         if textField.isEditing == true {
@@ -100,6 +97,8 @@ class ViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSou
         
         self.endCityPickerView.isHidden = true
     }
+    
+
 }
 
 
